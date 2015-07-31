@@ -1,6 +1,6 @@
 # push-msg-web
 
-这个项目是为了解决项目web应用的实时消息推送建立
+这个项目是我为了解决项目中 web应用的实时消息推送而创建
 
 使用了 cometd spring kafka redis
 
@@ -17,7 +17,7 @@
 ######注意
 
 本工程只测试 long poling方式
-
+cometd框架是算学算用，欢迎大家批评
 项目用的一些jar无法开源出来，你可以把redis和kafka换成自己的实现
 
 

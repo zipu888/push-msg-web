@@ -4,10 +4,10 @@
 
 使用了 cometd spring kafka redis
 
-cometd 用来推送
-spring 用来集成
-kafka 用来接受业务系统需要推送的消息
-redis 用来绑定cometd用户和业务用户的关系 用来推送给特定的人
+* cometd 用来推送
+* spring 用来集成
+* kafka 用来接受业务系统需要推送的消息
+* redis 用来绑定cometd用户和业务用户的关系 用来推送给特定的人
 
 利用channel 来实现批量推送
 

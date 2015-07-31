@@ -8,10 +8,13 @@
 * spring 用来集成
 * kafka 用来接受业务系统需要推送的消息
 * redis 用来绑定cometd用户和业务用户的关系 用来推送给特定的人
+* 利用cometd的channel 来实现批量推送
 
-利用channel 来实现批量推送
+###### 程序逻辑
 
 利用kafka接受需要推送的消息，通过cometd来推送出去，cometd推送支持long poling 和 websocket方式
+
+######注意
 
 本工程只测试 long poling方式
 

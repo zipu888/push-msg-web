@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+
+
+	<!-- 提供方应用信息，用于计算依赖关系 -->
+	<dubbo:application name="web-msg-push" logger="slf4j" />
+
+	<!-- 配置consumer超时时间 -->
+	<dubbo:consumer timeout="${dubbo.timeout}"/>
+
+	<!-- 使用zookeeper暴露服务地址 -->
+	<dubbo:registry protocol="zookeeper" address="${dubbo.zookeeper}" />
+
+	<!-- 管	理 -->
+	<dubbo:reference id="messageUserModuleImpl" interface="net.yunxiaoyuan.manage.module.IMessageUserModule" url="${service.url.manage}"/>
+
+</beans>
